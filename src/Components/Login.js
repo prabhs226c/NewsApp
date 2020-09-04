@@ -26,13 +26,13 @@ export default class Login extends Component{
         const userName = this.state.username
         const pwd = this.state.password
 
-        fetch('http://localhost:2260/admin/Login',{
+        fetch('https://backend-newz.herokuapp.com/api/user/login',{
             method:'POST',
             mode:'cors',
             headers:{
                 'Content-Type': 'application/json'
             },
-            body:JSON.stringify({username:userName,password:pwd})
+            body:JSON.stringify({email_id:userName,password:pwd})
         }).then(response => this.manageLoginResponse(response))
 
 
