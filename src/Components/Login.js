@@ -32,7 +32,7 @@ export default class Login extends Component{
             headers:{
                 'Content-Type': 'application/json'
             },
-            body:JSON.stringify({email_id:userName,password:pwd})
+            body:JSON.stringify({email:userName,password:pwd})
         }).then(response => this.manageLoginResponse(response))
 
 
